@@ -1,10 +1,34 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+	ViewData["Title"] = "Currency API";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+	<h1 class="display-4">Currency API</h1>
+	<br />
+	<div>
+		<h3>Converter Moeda</h3>
+		<p>$&nbsp;<input id="txtSource" disabled="disabled" value="USD" /></p>
+	</div>
+	<br />
+	<div>
+		<h4>Para</h4>
+		<div>
+			<input id="cbPara1" type="checkbox" /><label for="cbPara1">&nbsp;BRL</label>&nbsp;&nbsp;
+			<input id="cbPara2" type="checkbox" /><label for="cbPara2">&nbsp;AUD</label>&nbsp;&nbsp;
+			<input id="cbPara3" type="checkbox" /><label for="cbPara3">&nbsp;CAD</label>&nbsp;&nbsp;
+			<input id="cbPara4" type="checkbox" /><label for="cbPara4">&nbsp;GBP</label>&nbsp;&nbsp;
+			<input id="cbPara5" type="checkbox" /><label for="cbPara5">&nbsp;EUR</label>
+		</div>
+	</div>
+	<br />
+	<div>
+		<button id="btnBuscarCotacao" class="btn btn-dark">Buscar Cotação</button>
+	</div>
+	<br />
+	<div>
+		<h4>Cotação Atual</h4>
+		<p>BRL: 3,16</p>
+	</div>
 </div>
