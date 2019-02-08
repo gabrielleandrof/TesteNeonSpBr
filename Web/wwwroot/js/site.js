@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
 
-	var api = "http://localhost:49163/api/Currency";
+	var api = "https://localhost:49163/api/Currency";
 
 	$("#btnBuscarCotacao").click(function (e) {
 		e.preventDefault();
