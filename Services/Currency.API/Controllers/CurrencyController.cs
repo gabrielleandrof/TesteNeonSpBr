@@ -23,7 +23,7 @@ namespace currency.api.Controllers
 
 		// GET api/currency?source=USD&currencyFor=BRL
 		[HttpGet]
-		public ActionResult<dynamic> Get([FromQuery]string source, string currencyFor)
+		public ActionResult<dynamic> Get([FromQuery]string source, [FromQuery]string currencyFor)
 		{
 			string uri = $"{_currencyLayerConfig.BaseAddress}live?access_key={_currencyLayerConfig.APIAccessKey}&source={source.ToUpper()}&currencies={currencyFor.ToUpper()}&format=1";
 			HttpClient client = new HttpClient();

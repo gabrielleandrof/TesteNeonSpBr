@@ -26,6 +26,7 @@ namespace currency.api
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
+			services.AddCors(options => { options.AddPolicy("AllowAllHeaders", builder => { builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader(); }); });
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 			services.Configure<CurrencyLayerConfig>(Configuration.GetSection("CurrencyLayerConfig"));
 			services.AddSwaggerGen(options =>
@@ -54,6 +55,7 @@ namespace currency.api
 				app.UseHsts();
 			}
 
+			app.UseCors("AllowAllHeaders");
 			app.UseSwagger()
 			.UseSwaggerUI(c =>
 			{

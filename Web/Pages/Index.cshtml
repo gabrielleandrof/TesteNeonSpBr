@@ -3,23 +3,21 @@
 @{
 	ViewData["Title"] = "Currency API";
 }
-
 <div class="text-center">
 	<h1 class="display-4">Currency API</h1>
 	<br />
 	<div>
 		<h3>Converter Moeda</h3>
-		<p>$&nbsp;<input id="txtSource" disabled="disabled" value="USD" /></p>
+		<h5>$ USD</h5>
 	</div>
-	<br />
 	<div>
-		<h4>Para</h4>
+		<h3>Para</h3>
 		<div>
-			<input id="cbPara1" type="checkbox" /><label for="cbPara1">&nbsp;BRL</label>&nbsp;&nbsp;
-			<input id="cbPara2" type="checkbox" /><label for="cbPara2">&nbsp;AUD</label>&nbsp;&nbsp;
-			<input id="cbPara3" type="checkbox" /><label for="cbPara3">&nbsp;CAD</label>&nbsp;&nbsp;
-			<input id="cbPara4" type="checkbox" /><label for="cbPara4">&nbsp;GBP</label>&nbsp;&nbsp;
-			<input id="cbPara5" type="checkbox" /><label for="cbPara5">&nbsp;EUR</label>
+			<input id="cbPara1" type="checkbox" name="moedas" value="BRL" class="select-moeda" /><label class="select-moeda" for="cbPara1">&nbsp;BRL</label>&nbsp;&nbsp;
+			<input id="cbPara2" type="checkbox" name="moedas" value="AUD" class="select-moeda" /><label class="select-moeda" for="cbPara2">&nbsp;AUD</label>&nbsp;&nbsp;
+			<input id="cbPara3" type="checkbox" name="moedas" value="CAD" class="select-moeda" /><label class="select-moeda" for="cbPara3">&nbsp;CAD</label>&nbsp;&nbsp;
+			<input id="cbPara4" type="checkbox" name="moedas" value="GBP" class="select-moeda" /><label class="select-moeda" for="cbPara4">&nbsp;GBP</label>&nbsp;&nbsp;
+			<input id="cbPara5" type="checkbox" name="moedas" value="EUR" class="select-moeda" /><label class="select-moeda" for="cbPara5">&nbsp;EUR</label>
 		</div>
 	</div>
 	<br />
@@ -27,8 +25,5 @@
 		<button id="btnBuscarCotacao" class="btn btn-dark">Buscar Cotação</button>
 	</div>
 	<br />
-	<div>
-		<h4>Cotação Atual</h4>
-		<p>BRL: 3,16</p>
-	</div>
+	<div id="divCotacao" style="display: none;"></div>
 </div>
